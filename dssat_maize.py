@@ -11,18 +11,14 @@ import cftime
 from netCDF4 import Dataset, num2date
 import sys
 
-#cultivar= sys.argv[1]
-input_weatherfileNC= sys.argv[1]
-dssat_output_file_netcdf=sys.argv[2]
-
 
 dssat_weather_file = 'TEST5155.WTH'
 weather_code = "TEST5155"
 expInFilename = "TEMA8001.MZX"
 expOutFilename = "writing.mzx"
-#input_weatherfileNC = 'cregridclimate2.nc'
+input_weatherfileNC = 'cregridclimate2.nc'
 dssat_output_file = "Summary.OUT"
-#dssat_output_file_netcdf ="obat_2msimu_50_nofer.nc"
+dssat_output_file_netcdf ="afri_yield.nc"
 input_soilfileNC = 'AFRICA_Soil.nc'
 soil_code1 = "HC_GEN00"
 soil_code2 = "HC_GEN000"
@@ -41,14 +37,10 @@ fertil_switch = "1"  #please note that 0 is for no fertilizer and 1 for include 
 
 variable_names = ['rsds','tmax', 'tmin', 'pr']			#geoengineering
 
-
-
 #extracting sim date to a format dssat can use
 jan_sim_date= datetime.strptime(jan_simulaton_date, '%d-%m-%Y').strftime('%y%j')
 
 dec_max_date= datetime.strptime(December_maximum_planting, '%d-%m-%Y').strftime('%y%j')
-
-
 
 def WriteWeatherASCII(dssat_weather_file, times, wDataArray):
 
