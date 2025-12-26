@@ -1,1 +1,1 @@
-The code is the main body of how the DSSAT-CSM crop model can be used spatially. The code allows the model to receives girded information and result generated is stored in a netcdf file.
+This script runs grid-based DSSAT crop simulations using gridded NetCDF climate, soil, fertilizer, and planting calendar inputs, and writes the simulated outputs back to a NetCDF file.
